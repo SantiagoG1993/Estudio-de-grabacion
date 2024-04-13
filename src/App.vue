@@ -1,30 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <div class="app_container">
+        <IndexView />
+        <ImagesView />
+        <ThirdView />
+        <ContactView />
+        <UpButtonComponent />
+        <WappComponent />
+    </div>
+
 </template>
 
+<script setup>
+import IndexView from './views/IndexView.vue'
+import ImagesView from './views/ImagesView.vue'
+import ThirdView from './views/ThirdView.vue'
+import ContactView from './views/ContactView.vue'
+import UpButtonComponent from './components/UpButtonComponent.vue'
+import WappComponent from './components/WappComponent.vue'
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+:root{
+  --font1:"Kelly Slab", sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav {
-  padding: 30px;
-}
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
