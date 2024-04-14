@@ -1,16 +1,14 @@
 <template>
     <div class="projects_main_container">
         <section class="images">
-            <img src="foto2.png" alt="">
-            <img src="foto3.png" alt="">
-            <img src="foto4.png" alt="" id="foto4">
+            <img src="foto2.png" alt="" class="wow animate__animated animate__fadeInUp">
+            <img src="foto3.png" alt="" class="wow animate__animated animate__fadeInRight">
+            <img src="foto4.png" alt="" id="foto4" class="wow animate__animated animate__fadeInDown">
         </section>
 
     </div>
 </template>
 <script setup>
-
-
 
 </script>
 <style scoped>

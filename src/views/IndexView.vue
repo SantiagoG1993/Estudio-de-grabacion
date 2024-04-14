@@ -2,11 +2,11 @@
     <div class="index_main_container">
         <NavBarComponent/>
         <div class="img_container">
-            <img src="foto1.png" alt="" id="foto1">
-            <p id="estudio">ESTUDIO JOG</p>
-            <p id="subtitle">Estudio de grabacion y produccion musical</p>
+            <img src="foto1.png" alt="" id="foto1" class="animate__animated animate__fadeIn">
+            <p id="estudio" class="animate__animated animate__slideInDown">ESTUDIO JOG</p>
+            <p id="subtitle" class="animate__animated animate__slideInUp">Estudio de grabacion y produccion musical</p>
         </div>
-        <div class="services">
+        <div class="services animate__animated animate__fadeInUp">
             <ul >
                 <li>GRABACION MULTIPISTA</li>
                 <li>MEZCLA</li>
@@ -34,7 +34,8 @@ import NavBarComponent from '../components/NavBarComponent.vue'
 #foto1{
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
+    
 }
 .img_container{
     width: 100%;

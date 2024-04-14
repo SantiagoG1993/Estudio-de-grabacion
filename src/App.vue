@@ -6,6 +6,7 @@
         <ContactView />
         <UpButtonComponent />
         <WappComponent />
+        <FooterView /> 
     </div>
 
 </template>
@@ -17,6 +18,15 @@ import ThirdView from './views/ThirdView.vue'
 import ContactView from './views/ContactView.vue'
 import UpButtonComponent from './components/UpButtonComponent.vue'
 import WappComponent from './components/WappComponent.vue'
+import FooterView from './views/FooterView.vue'
+import 'animate.css'
+import { onMounted } from 'vue';
+import WOW from 'wow.js'
+
+onMounted(()=>{
+    const wow = new WOW();
+    wow.init()
+})
 </script>
 
 <style>
