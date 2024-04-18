@@ -1,12 +1,23 @@
 <template>
     <div class="thirdview_main_container">
         <h1>Trabajos</h1>
-        <img src="foto5.png" alt="" id="foto5" class="wow animate__animated animate__fadeIn">
+        <img src="foto5.png" alt="" id="foto5" class="wow animate__animated animate__fadeIn" >
+
         <section class="song">
-            <i class="fa-solid fa-chevron-left wow animate__animated animate__fadeInLeft" ></i>
+            <!-- FLECHA IZQUIERDA -->
+            <i class="fa-solid fa-chevron-left wow animate__animated animate__fadeInLeft" 
+                @click="handlePrevSong">
+            </i>
+            <!-- PORTADA-->
             <img :src="selectedSong.cover" alt="" id="cover" :class="{'--playSong':showPlayBtn}" @mouseover="showPlayBtn = true" @mouseleave="showPlayBtn = false" class="wow animate__animated animate__fadeInUp">
-            <i class="fa-solid fa-chevron-right wow animate__animated animate__fadeInRight"></i> 
-            <i v-if="showPlayBtn" class="fa-regular fa-circle-play"  @mouseover="showPlayBtn = true"></i>
+            <!-- FLECHA DERECHA -->   
+            <i class="fa-solid fa-chevron-right wow animate__animated animate__fadeInRight" @click="handleNextSong"></i> 
+            <!-- BOTON PLAY -->
+            <i  v-if="showPlayBtn" class="fa-regular fa-circle-play"               
+                @click="playAudio"  
+                @mouseover="showPlayBtn = true">
+            </i>
+            <audio  ref="audioPlayer" :src="'./audio/' + selectedSong.urlSong"></audio>
             <p id="band_name" class="wow animate__animated animate__fadeInRight">{{selectedSong.bandName}} - {{ selectedSong.song }}</p>
         </section>
         <section class="all_songs">
@@ -18,12 +29,34 @@
 </template>
 <script setup>
 import { ref } from 'vue';
+import { onClickOutside } from '@vueuse/core';
 import data from "../assets/data.js"
 
-const selectedSong = ref(data[0])
 
+const audioPlayer = ref(null);
+const selectedSong = ref(data[0])
 const showPlayBtn = ref(false)
 
+const playAudio = () => {
+    audioPlayer.value.play();
+};
+onClickOutside(audioPlayer,()=>{
+    if (audioPlayer.value) {
+    audioPlayer.value.pause()
+}})
+
+const handleNextSong = () => {
+    const currentIndex = data.findIndex(song => song.id === selectedSong.value.id);
+    if (currentIndex !== -1 && currentIndex < data.length - 1) {
+        selectedSong.value = data[currentIndex + 1];
+    }
+};
+const handlePrevSong = () => {
+    const currentIndex = data.findIndex(song => song.id === selectedSong.value.id);
+    if (currentIndex !== -1 && currentIndex > 0) {
+        selectedSong.value = data[currentIndex - 1];
+    }
+};
 
 const handleSelect = (song)=>{
     selectedSong.value = song

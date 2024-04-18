@@ -3,7 +3,7 @@
         <div class="logo_circle">
             <img src="faders.svg" id="faders" alt="">
         </div>
-        <p id="jog">JOG</p>
+        <p id="jog">G-SOUND</p>
         <p id="subtitle">Estudio de grabacion</p>
 
     </div>

@@ -3,12 +3,13 @@
         <NavBarComponent/>
         <div class="img_container">
             <img src="foto1.png" alt="" id="foto1" class="animate__animated animate__fadeIn">
-            <p id="estudio" class="animate__animated animate__slideInDown">ESTUDIO JOG</p>
+            <p id="estudio" class="animate__animated animate__slideInDown">ESTUDIO G-SOUND</p>
             <p id="subtitle" class="animate__animated animate__slideInUp">Estudio de grabacion y produccion musical</p>
         </div>
         <div class="services animate__animated animate__fadeInUp">
             <ul >
                 <li>GRABACION MULTIPISTA</li>
+                <li>EDICION</li>
                 <li>MEZCLA</li>
                 <li>MASTERING</li>
                 <li>PRODUCCION MUSICAL</li>
@@ -63,7 +64,7 @@ import NavBarComponent from '../components/NavBarComponent.vue'
     text-align: center;
 }
 .services{
-    margin-top: 43px;
+    margin-top: 20px;
 }
 .services ul{
     list-style-type: none;
@@ -72,6 +73,6 @@ import NavBarComponent from '../components/NavBarComponent.vue'
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 24px;
+    font-size: 20px;
 }
 </style>

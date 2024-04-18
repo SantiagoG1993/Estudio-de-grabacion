@@ -1,17 +1,18 @@
 <template>
     <div class="contact_form_main_container wow animate__animated animate__fadeInRight">
         <h3>ENVIANOS UN MENSAJE</h3>
-        <form action="">
+        <form action="https://formsubmit.co/gamarras1993@gmail.com" method="POST">
             <label for="">Nombre
-                <input type="text" class="input_text">
+                <input type="text" class="input_text" name="name">
             </label>
             <label for="">Email
-                <input type="text" class="input_text">
+                <input type="text" class="input_text" name="email">
             </label>
             <label for="">Mensaje
-                <input type="text" class="input_text_msg">
+                <input type="text" class="input_text_msg" name="message">
             </label>
-            <button>Enviar</button>
+            <button type="submit">Enviar</button>
+            <input type="hidden" name="_captcha" value="false">
         </form>
     </div>
 
