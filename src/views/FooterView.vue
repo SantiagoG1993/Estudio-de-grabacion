@@ -13,7 +13,7 @@
             </ul>
         </section>
         <section class="info2">
-            <p><i class="fa-solid fa-envelope"></i> estudiogsound@gmail.com</p>
+            <p><i class="fa-solid fa-envelope"></i> gsoundestudio@gmail.com</p>
             <p><i class="fa-solid fa-phone"></i> +54 9 341 2475871</p>
             <p><i class="fa-brands fa-instagram"></i> /gsoundestudio</p>
             <p><i class="fa-brands fa-square-facebook"></i> /estudiogsound</p>

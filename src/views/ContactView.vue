@@ -3,7 +3,7 @@
         <h1>Contacto</h1>
         <section>
             <p><strong>Telefono:</strong> +54 9 341 2475871</p>
-            <p><strong>Email:</strong> estudiojog@gmail.com</p>
+            <p><strong>Email:</strong> gsoundestudio@gmail.com</p>
             <p><strong>Direccion:</strong> Chivilcoy 2745 - San Pedro, Buenos Aires, Argentina</p>
         </section>
     

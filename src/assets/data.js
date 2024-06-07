@@ -35,5 +35,12 @@ const data = [
         cover:'cover1.jpg',
         urlSong:''
     },
+    {
+        id:6,
+        bandName:'Orden Masyaf',
+        song:'asdasdasd',
+        cover:'asdsad',
+        urlSong:''
+    },
 ]
 export default data;
